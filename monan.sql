@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2017 at 09:45 AM
+-- Generation Time: May 12, 2017 at 10:09 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `tbl_listmenu` (
   `c_description` varchar(500) NOT NULL,
   `c_price` float NOT NULL,
   `c_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_listmenu`
@@ -70,7 +70,9 @@ INSERT INTO `tbl_listmenu` (`pk_listmenu_id`, `c_name`, `fk_menu_id`, `c_descrip
 (10, 'Auberine Salad', 3, 'Refreshing traditional cucumber and garlic yoghurt dip', 3.5, 0),
 (11, 'Tzatslkl', 4, 'Refreshing traditional cucumber and garlic yoghurt dip', 1.6, 0),
 (12, 'Auberglne Salad', 4, 'Refreshing traditional cucumber and garlic yoghurt dip', 3.2, 1),
-(13, 'Auberine Salad', 4, 'Refreshing traditional cucumber and garlic yoghurt dip', 2.6, 0);
+(13, 'Auberine Salad', 4, 'Refreshing traditional cucumber and garlic yoghurt dip', 2.6, 0),
+(16, 'Tzatslkl', 2, 'Refreshing traditional cucumber and garlic yoghurt dip', 3.5, 0),
+(18, 'Tzatslkl', 1, 'Refreshing traditional cucumber and garlic yoghurt dip', 3.5, 0);
 
 -- --------------------------------------------------------
 
@@ -81,7 +83,7 @@ INSERT INTO `tbl_listmenu` (`pk_listmenu_id`, `c_name`, `fk_menu_id`, `c_descrip
 CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `pk_menu_id` int(11) NOT NULL,
   `c_name` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_menu`
@@ -127,18 +129,9 @@ CREATE TABLE IF NOT EXISTS `tbl_reservations` (
   `pk_reservations_id` int(11) NOT NULL,
   `c_name` varchar(500) NOT NULL,
   `c_email` varchar(500) NOT NULL,
-  `c_date` date NOT NULL,
+  `c_date` varchar(100) NOT NULL,
   `c_number` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_reservations`
---
-
-INSERT INTO `tbl_reservations` (`pk_reservations_id`, `c_name`, `c_email`, `c_date`, `c_number`) VALUES
-(29, 'Tzatslkl', 'abc@gmail.com', '2017-05-02', 4),
-(30, '5', '3r', '2017-05-03', 5),
-(31, '5', '3r', '2017-05-03', 5);
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -187,12 +180,12 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_listmenu`
 --
 ALTER TABLE `tbl_listmenu`
-  MODIFY `pk_listmenu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `pk_listmenu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tbl_menu`
 --
 ALTER TABLE `tbl_menu`
-  MODIFY `pk_menu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `pk_menu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_qlmenu`
 --
@@ -202,7 +195,7 @@ ALTER TABLE `tbl_qlmenu`
 -- AUTO_INCREMENT for table `tbl_reservations`
 --
 ALTER TABLE `tbl_reservations`
-  MODIFY `pk_reservations_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+  MODIFY `pk_reservations_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=136;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
