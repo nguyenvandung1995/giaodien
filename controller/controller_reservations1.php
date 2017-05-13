@@ -1,18 +1,32 @@
 <?php
+	include("model/model_reservation.php");
+	$data=array();
+	$error=array();
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		//if(isset($_POST["btl"])){
-		$c_name=$_POST["c_name"];
-		$c_email=$_POST["c_email"];
-		$c_date=$_POST["inputDatetator1"];
-		$c_number=$_POST["c_number"];
-		execute("insert into tbl_reservations(c_name,c_email,c_date,c_number) values('$c_name','$c_email','$c_date',$c_number)");
-
-        //$dinh_dang_cu =$c_date;  
-		//$dinh_dang_moi = date("d-m-Y", strtotime($dinh_dang_cu));  
-		//echo "Định dạng cũ: " .$dinh_dang_cu."<br>";
-		//echo "Định dạng mới: " .$dinh_dang_moi."<br>";
-       echo "<script>alert('Gửi Thành Công')</script>";
+		$arr["c_name"]=$_POST["c_name"];
+		$arr["c_email"]=$_POST["c_email"];
+		$arr["c_date"]=$_POST["c_date"];
+		$arr["c_number"]=$_POST["c_number"];
+		//$date=date("d-m-Y",time());
+		//if(strtotime($arr["c_date"]) < strtotime($date)){
+			//$error["c_date"]="Ngay Nhap sai";
+			
+		//}
+		//if($arr["c_number"]<=0){
+			//$error["c_number"]="nhap so luong sai";	
+		//}
+		insert($arr);
+			//ob_clean();
+			ob_clean();
+			header("location:index.php");
+		//if(empty($error)){
+			
+			
+		//}
 		
+		
+		//print_r($arr);
 	}
 	include_once("view/view_reservations1.php");
 ?>

@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
-body {margin:0;padding:0}
+body {margin:0;padding:0;width:100%}
+
 /*.wraper{width:1349px;height:auto;background-image:url(image/header.jpg);margin:auto}*/
 .wraper{
 	width:1349px;
@@ -11,7 +12,7 @@ body {margin:0;padding:0}
 	margin:auto;
 	}
 .wraper .header_a{
-	width:1349px;
+	width:100%;
 	height:100%;
 	margin:auto;
 	background-image:url(image/header.jpg);
@@ -63,7 +64,7 @@ body {margin:0;padding:0}
 	}
 .wraper .header .header_link ul{
 	list-style:none;
-	margin-top:40px;
+	margin-top:20px;
 	padding:0;
 	}
 .wraper .header .header_link ul li{
@@ -103,7 +104,8 @@ body {margin:0;padding:0}
 	background: rgba(1,1,1,0.5)
 	}
 	.wraper .header .chontab .chontab_1 .chontab_1a:hover{
-		background: rgba(1,1,1,1)
+		background: rgba(1,1,1,1);
+		cursor:pointer;
 	}
 .wraper .header .chontab .chontab_1 .chontab_1a {
 	font-family: 'Lato', sans-serif;
@@ -125,7 +127,7 @@ body {margin:0;padding:0}
 	text-align:center;
 	background:rgba(225,255,255,0.2);
 	}
-	.wraper .header .chontab .chontab_1 .chontab_1b:hover{background:rgba(1,1,1,1)}
+	.wraper .header .chontab .chontab_1 .chontab_1b:hover{background:rgba(1,1,1,1);cursor:pointer;}
 .wraper .header .chontab .chontab_1 .chontab_1b a{
 	text-decoration:none;
 	color:#FFF;
@@ -145,7 +147,7 @@ body {margin:0;padding:0}
 	margin:auto;
 	}
 .wraper .about_1a{
-	width:430px;
+	width:545px;
 	float:left;
 	padding-left:110px;
 	padding-top:152px
@@ -279,8 +281,9 @@ body {margin:0;padding:0}
 	padding-top:10px;
 	 }
 .wraper .menu .menu_listds .box_menu1 .box_desciption1{
-	font-size:16px;
+	font-size:15px;
 	font-family: 'Open Sans', sans-serif;
+	color:#4c4c4c;
 	}
 .wraper .menu .menu_listds .box_menu1 .box_special{
 	border:1px solid rgba(243,194,70,0.3);
@@ -399,14 +402,10 @@ body {margin:0;padding:0}
 .wraper .Reservations .Reservations_a .Reservations_abb .Reservations_abb_form{
 	padding: 10px 30px;
 	}
-.wraper .Reservations .Reservations_a .Reservations_abb .Reservations_abb_form .inputname{
-	width:171px;
-	height:27px;
-	margin-bottom:30px;
-	padding-left: 10px;
-	}
-.wraper .Reservations .Reservations_a .Reservations_abb .Reservations_abb_form .inputname:hover{
-	border:1px solid #c9a131;
+
+.wraper .Reservations .Reservations_a .Reservations_abb .Reservations_abb_form input{color:#7c7c7c}
+.wraper .Reservations .Reservations_a .Reservations_abb .Reservations_abb_form input:hover{
+	border-color:#cc9900;
 	}
 .wraper .footer{
 	width:100%; 

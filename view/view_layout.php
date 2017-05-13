@@ -6,28 +6,13 @@
 </head>
 <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="public/layout.css"/>
-<link rel="stylesheet" type="text/css" href="public/datetator/fm.datetator.jquery.css"/>
-	<script src="public/datetator/jquery-1.11.0.min.js"></script>
-	<script src="public/datetator/fm.datetator.jquery.js"></script>
-	<script src="public/datetator/fm.datetator-fo.jquery.js"></script>
-    <script src="public/datetator/fm.datetator-en.jquery.js"></script>
-	<script src="public/datetator/fm.datetator-de.jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="public/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="public/datetimepicker/jquery.datetimepicker.css"/>
+<link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     	
 
-<body>
+<body>	
 
-		
-		
-<script>
-		$(function () {
-			var $activate_datetator1 = $('#activate_datetator1');
-			var $inputDatetator1 = $('#inputDatetator1');
-			$('#inputDatetator1').datetator({
-	useDimmer: true,
-	
-});
-		});
-	</script>
 <div class="wraper">
 <!--header-->
 <div class="header_a">
@@ -61,10 +46,12 @@ for the right food
         
         <div class="chontab">
         	<div class="chontab_1">
+            <a href="#">
               <div class="chontab_1a">
                   <a href="">BOOKA TABLE</a>
           
               </div>
+              </a>
               <div class="chontab_1b">
                    <a href="">SEE THE MENU</a>
           
@@ -141,56 +128,7 @@ for the right food
         </div>
     </div>
     <!--ReViews-->
-    
-    <!--Reservations-->
- <!--   <div class="Reservations">
-    	<div class="Reservations_1">
-        	<div class="Reservations_1a">
-            	<div class="Reservations_img"><img src="public/image/Reservations_img1.jpg" /></div>
-                <div class="Reservations_img"><img src="public/image/Reservations_img2.jpg" /></div>
-            </div>
-            <div class="Reservations_1b">
-            	<div class="Reservations_1bb">
-                    <div class="Reservations_1b1">
-                        Just the right food
-                    </div>
-                    <div class="Reservations_1b2">
-                        <img src="public/image/duongvien_about.png" style="text-align:center" />
-                    </div>
-                    <div class="Reservations_1b3">
-                        If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.<br /><br />
-    
-    Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.
-                    </div>
-                    <div class="Reservations_1b4">
-                    	<div class="Reservations_1b4name">
-                        	<span style="font-family: 'Open Sans', sans-serif;font-size:14px;font-weight:bold">Name</span>
-                            <input class="inputname" type="text" placeholder="   Your name *" />
-                        </div>
-                        <div class="Reservations_1b4name">
-                        	<span style="font-family: 'Open Sans', sans-serif;font-size:14px;font-weight:bold">Name</span>
-                            <input class="inputname" type="text" placeholder="   Your email *" />
-                        </div>
-                        <div class="Reservations_1b4name">
-                        	<span style="margin-bottom:5px;font-family: 'Open Sans', sans-serif;font-size:14px;font-weight:bold">Date</span>
-                            <input style="width: 175px;padding: 8px 16px;" id="inputDatetator1" name="inputDatetator1" value="" >
-		
-                        </div>
-                        <div class="Reservations_1b4name">
-                        	<span style="font-family: 'Open Sans', sans-serif;font-size:14px;font-weight:bold">Part number</span>
-                            <input class="inputname" type="number" />
-							
-                        </div>
-                        <div class="Reservations_sb" style="text-align:center;margin-bottom:50px"><input style="width:150px;height:34px;background:#c9a131;border:0;color:#FFF" class="inputsubmit" type="submit" value="Book now!" /></div>
-                        <div style="clear:both"></div>
-                        
-                    </div>
-                 </div>
-            </div>
-        
-        </div>
-    </div>
-    -->
+
     <div class="Reservations">
     	<div class="Reservations_a">
         	<div class="Reservations_aa">
@@ -264,4 +202,8 @@ Lamda the best restaurant in town</div>
 </div>
 
 </body>
+
+<script src="public/datetimepicker/jquery.js"></script>
+<script src="public/datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="controller/datetimepicker.js"></script>
 </html>
