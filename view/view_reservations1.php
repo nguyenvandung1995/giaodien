@@ -10,12 +10,12 @@ function check_submit_addnew()
   //var date=new Date('d-m-Y');
   
 
-  //  if(frm.c_number.value<=0)
-  // {
-      //alert('Số lượng phải lớn hơn 0!');			
-     // document.forms['addreservation'].c_number.focus();
-     // return false;
-  // }
+    if(frm.c_number.value<=0)
+	{
+      alert('Số lượng phải lớn hơn 0!');			
+     document.forms['addreservation'].c_number.focus();
+     return false;
+	}
   //var date= new Date();
    var timeInput = new Date(frm.c_date.value).getTime();
    var timeCurr  = (new Date()).now();
