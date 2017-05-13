@@ -9,7 +9,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-5">Tên Menu</div>
 				<div class="col-lg-7">
-					<input value="<?php if(isset($arr_qlmenu["c_name"])) echo $arr_qlmenu["c_name"]?>" type="text" name="c_name" class="form-control" >
+					<input value="<?php if(isset($arr["c_name"])) echo $arr["c_name"]?>" type="text" name="c_name" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->
@@ -17,7 +17,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-5">Liên Kết</div>
 				<div class="col-lg-7">
-					<input value="<?php if(isset($arr_qlmenu["c_link"])) echo $arr_qlmenu["c_link"]?>" type="text" name="c_link" class="form-control" >
+					<input value="<?php if(isset($arr["c_link"])) echo $arr["c_link"]?>" type="text" name="c_link" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->

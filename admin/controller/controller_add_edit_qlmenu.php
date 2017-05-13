@@ -1,32 +1,45 @@
 <?php
-	$act=isset($_GET["act"])?$_GET["act"]:"";
-	switch($act){
-		case'edit':
-			$id=isset($_GET["id"])?$_GET["id"]:0;
-			$arr_qlmenu=fetch_one("select * from tbl_qlmenu where pk_qlmenu_id=$id");
-			$form_control="index.php?controller=add_edit_qlmenu&act=do_edit&id=$id";	
-			break;
-			case 'do_edit':
-				if($_SERVER["REQUEST_METHOD"] == "POST"){
-					$id=isset($_GET["id"])?$_GET["id"]:0;
-					$c_name= htmlspecialchars($_POST["c_name"],ENT_QUOTES);
-					$c_link= htmlspecialchars($_POST["c_link"],ENT_QUOTES);
-						execute("update tbl_qlmenu set c_name='$c_name',c_link='$c_link' where pk_qlmenu_id=$id");
-					header("location:index.php?controller=qlmenu");	
-				}
-				break;
-		case'add':
-			$form_control="index.php?controller=add_edit_qlmenu&act=do_add";
-			break;
-		case'do_add':
-			if($_SERVER["REQUEST_METHOD"] == "POST"){
-			$c_name = htmlspecialchars($_POST["c_name"],ENT_QUOTES);
-			$c_link = htmlspecialchars($_POST["c_link"],ENT_QUOTES);
-						
-					execute("insert into tbl_qlmenu(c_name,c_link) values('$c_name','$c_link')");	
-					header("location:index.php?controller=qlmenu");	
+	include("model/model_add_edit_qlmenu.php");
+	class controller_add_edit_qlmenu{
+		public $model_add_edit_qlmenu;
+		public function __construct(){
+			$this->model_add_edit_qlmenu=new model_add_edit_qlmenu();
+			$act = "";
+			if(isset($_GET["act"]))
+				$act = $_GET["act"];
+			//----------------
+			$form_control = "";
+			switch($act){
+				case 'add':
+					$form_control = "index.php?controller=add_edit_qlmenu&act=do_add";
+					include_once("view/view_add_edit_qlmenu.php");	
+					break;
+				case 'do_add':
+					$arr["c_name"]=$_POST["c_name"];
+					$arr["c_link"]=$_POST["c_link"];
+					$this->model_add_edit_qlmenu->insert($arr);
+					header("location:index.php?controller=qlmenu");
+					break;
+				case 'edit':
+					$id=$_GET["id"];
+					$arr=$this->model_add_edit_qlmenu->get_id($id);
+					$form_control="index.php?controller=add_edit_qlmenu&act=do_edit&id=$id";
+					include_once("view/view_add_edit_qlmenu.php");	
+					break;
+				case 'do_edit':
+					$arr["id"]=$_GET["id"];
+					$arr["c_name"]=$_POST["c_name"];
+					$arr["c_link"]=$_POST["c_link"];
+					$this->model_add_edit_qlmenu->update($arr);
+					header("location:index.php?controller=qlmenu");
+					break;
+					
+					
 			}
-		
+			
+		}	
 	}
-	include_once("view/view_add_edit_qlmenu.php");
+	$controller_add_edit_qlmenu= new controller_add_edit_qlmenu();
+
+	
 ?>

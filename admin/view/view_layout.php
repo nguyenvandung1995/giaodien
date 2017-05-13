@@ -8,13 +8,10 @@
    
     <link href="../public/assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="../public/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="../public/assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+   <link href="../public/assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
     <link href="../public/assets/css/style.css" rel="stylesheet" />
     <link href="../public/assets/css/main-style.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../public/font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- Page-Level CSS -->
-    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="controller/function.js"></script>
     <script language="javascript" src="../public/ckeditor/ckeditor.js"></script>
    </head>
 <body>
@@ -144,15 +141,15 @@
     
     <!-- end wrapper -->
 
-    <!-- Core Scripts - Include with every page -->
+     Core Scripts - Include with every page 
     <script src="../public/assets/plugins/jquery-1.10.2.js"></script>
     <script src="../public/assets/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="../public/assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../public/assets/plugins/pace/pace.js"></script>
+ <!-- <script src="../public/assets/plugins/pace/pace.js"></script>-->
     <script src="../public/assets/scripts/siminta.js"></script>
     <!-- Page-Level Plugin Scripts-->
-    <script src="../public/assets/plugins/morris/raphael-2.1.0.min.js"></script>
-    <script src="../public/assets/plugins/morris/morris.js"></script>
+   <!-- <script src="../public/assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="../public/assets/plugins/morris/morris.js"></script>-->
     <script src="../public/assets/scripts/dashboard-demo.js"></script>
 
 </body>

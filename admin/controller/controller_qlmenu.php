@@ -1,12 +1,22 @@
 <?php 
-	
-	$act=isset($_GET["act"])?$_GET["act"]:"";
-	if($act=="delete"){
-		$id=isset($_GET["id"])?$_GET["id"]:0;
-		execute("delete from tbl_qlmenu where pk_qlmenu_id=$id");
-		header("location:index.php?controller=qlmenu");
-			
+	include("model/model_qlmenu.php");
+	class controller_qlmenu{
+		public $model_qlmenu;
+		public function __construct(){
+			$this->model_qlmenu=new model_qlmenu();
+			$arr_qlmenu=$this->model_qlmenu->list_qlmenu();
+			//delete
+			$act="";
+			if(isset($_GET["act"]))
+			$act=$_GET["act"];
+			if($act=='delete'){
+				$id=$_GET["id"];
+				$this->model_qlmenu->delete($id);
+				header("location:index.php?controller=qlmenu");
+			}
+			include_once("view/view_qlmenu.php");	
+		}	
 	}
-	$arr_qlmenu=fetch("select * from tbl_qlmenu");
-	include_once("view/view_qlmenu.php");
+	$controller_qlmenu=new controller_qlmenu();
+	
 ?>

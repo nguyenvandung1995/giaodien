@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
                    <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             Quản lý Danh Sách Món Ăn
+                            
                         </div>
                         
                         <div class="panel-body">
@@ -31,7 +31,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
                                     <tbody>
                                     <?php
                                     	$stt=0;
-										foreach($arr_listmenu as $menu)
+										foreach($arr_menu as $menu)
 										{
 											$stt++;
 									?>
@@ -59,7 +59,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
                             </div>
                             <div>
                             <ul class="pagination" style="padding:0px; margin:0px;">
-                                <?php for($i = 1; $i <= $num_page; $i++){ ?>
+                                <?php for($i = 1; $i <= $so_trang; $i++){ ?>
                                 <li><a href="index.php?controller=menu&p=<?php echo $i;?>">
                                     <?php echo $i;?></a>
                             </li>

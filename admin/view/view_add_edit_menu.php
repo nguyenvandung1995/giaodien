@@ -9,7 +9,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-4">Tên</div>
 				<div class="col-lg-8">
-					<input value="<?php if(isset($arr_menu["c_name"])) echo $arr_menu["c_name"]?>" type="text" name="c_name" class="form-control" >
+					<input value="<?php if(isset($arr["c_name"])) echo $arr["c_name"]?>" type="text" name="c_name" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->

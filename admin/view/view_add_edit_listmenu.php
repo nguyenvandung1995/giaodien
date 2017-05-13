@@ -9,23 +9,25 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-4">Tên menu</div>
 				<div class="col-lg-8">
-					<input value="<?php if(isset($arr_listmenu["c_name"])) echo $arr_listmenu["c_name"]?>" type="text" name="c_name" class="form-control" >
+					<input value="<?php if(isset($arr["c_name"])) echo $arr["c_name"]?>" type="text" name="c_name" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->
+            
             <!-- begin row -->
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-4">Thuộc Menu</div>
 				<div class="col-lg-8">
                 	<select name="fk_menu_id">
                     <?php 
-					$arr_menu=fetch("select * from tbl_menu");
-						foreach($arr_menu as $menu)
+						$arr1=$this->model_add_edit_listmenu->get_menu();
+						foreach($arr1 as $menu)
 						{
 					?>
- 					<option <?php echo isset($arr_listmenu["fk_menu_id"])&&$arr_listmenu["fk_menu_id"]==$menu["pk_menu_id"]?"selected":"";?> value="<?php echo $menu["pk_menu_id"] ?>"><?php echo $menu["c_name"]?></option>
+ 					<option <?php echo isset($arr["fk_menu_id"])&&$arr["fk_menu_id"]==$menu["pk_menu_id"]?"selected":"";?> value="<?php echo $menu["pk_menu_id"] ?>"><?php echo $menu["c_name"]?></option>
                     <?php }?>
                     </select>
+                   
 					
 				</div>
 			</div>
@@ -34,7 +36,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-4">Mô Tả</div>
 				<div class="col-lg-8">
-					<input value="<?php if(isset($arr_listmenu["c_description"])) echo $arr_listmenu["c_description"]?>" type="text" name="c_description" class="form-control" >
+					<input value="<?php if(isset($arr["c_description"])) echo $arr["c_description"]?>" type="text" name="c_description" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->
@@ -42,7 +44,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-lg-4">Giá</div>
 				<div class="col-lg-8">
-					<input value="<?php if(isset($arr_listmenu["c_price"])) echo $arr_listmenu["c_price"]?>" type="text" name="c_price" class="form-control" >
+					<input value="<?php if(isset($arr["c_price"])) echo $arr["c_price"]?>" type="text" name="c_price" class="form-control" >
 				</div>
 			</div>
 			<!-- end row -->
@@ -52,10 +54,10 @@
 				<div class="col-lg-8">
 					
                     <select name="c_status">
-                    	<option <?php echo isset($arr_listmenu["c_status"])
-						&&$arr_listmenu["c_status"]==0?"selected":"";?> value="0">Normal</option>
-                        <option <?php echo isset($arr_listmenu["c_status"])
-						&&$arr_listmenu["c_status"]==1?"selected":"";?> value="1">Special</option>
+                    	<option <?php echo isset($arr["c_status"])
+						&&$arr["c_status"]==0?"selected":"";?> value="0">Normal</option>
+                        <option <?php echo isset($arr["c_status"])
+						&&$arr["c_status"]==1?"selected":"";?> value="1">Special</option>
                     </select>
 				</div>
 			</div>

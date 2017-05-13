@@ -40,7 +40,7 @@
                                         <th><input class="item" type="checkbox" value="<?php echo $listmenu["pk_listmenu_id"]?>" name="listmenu_id[]" class="ckeckbox"/></th>
                                             <th><?php echo $stt;?></th>
                                             <th><?php echo $listmenu["c_name"]?></th>
-                                            <th><?php $menu=fetch_one("select * from tbl_menu where pk_menu_id=".$listmenu["fk_menu_id"]); echo $menu["c_name"]?></th>
+                                            <th><?php $menu=$this->model_listmenu->get_menu($listmenu["fk_menu_id"]); echo $menu["c_name"]?></th>
                                             <th><?php echo $listmenu["c_description"]?></th>
                                             <th><?php echo $listmenu["c_price"]?>$</th>
                                             <th><?php if($listmenu["c_status"]==1) echo"Special";else ""; ?></th>
@@ -64,7 +64,7 @@
                             </div>
                             <div>
                             <ul class="pagination" style="padding:0px; margin:0px;">
-                                <?php for($i = 1; $i <= $num_page; $i++){ ?>
+                                <?php for($i = 1; $i <= $so_trang; $i++){ ?>
                                 <li><a href="index.php?controller=listmenu&p=<?php echo $i;?>">
                                     <?php echo $i;?></a>
                             </li>

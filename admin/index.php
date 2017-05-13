@@ -6,7 +6,8 @@
 	//load config
 	include_once("../config.php");
 	//load model
-	include_once("../model/model.php");
+	include_once("model/model.php");
+	$m = new model();
 	//-----
 	$controller=isset($_GET["controller"]) ? $_GET["controller"] : "";
 

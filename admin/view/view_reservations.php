@@ -47,6 +47,15 @@
                                      
                                     </tbody>
                                 </table>
+                                <div>
+                            <ul class="pagination" style="padding:0px; margin:0px;">
+                                <?php for($i = 1; $i <= $so_trang; $i++){ ?>
+                                <li><a href="index.php?controller=reservations&p=<?php echo $i;?>">
+                                    <?php echo $i;?></a>
+                            </li>
+                                <?php } ?>
+                            </ul>
+				</div>
                               
                             </div>
                             <div>
